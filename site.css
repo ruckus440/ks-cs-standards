@@ -1,0 +1,112 @@
+/** site.js 
+ * You should add your CSS code to this file.  
+ * See the assignment description in Guide for what
+ * your code needs to accomplish.
+ */
+
+.stdItem {
+    display: flex;
+    flex-direction: row;
+    min-height: 100px;
+    word-wrap: break-word;   
+    flex-wrap: wrap;
+}
+
+#banner {
+    background-color: lightgray;
+    min-height: 10px;
+}
+
+.identifier {
+    width: 10vw;
+}
+
+.statement {    
+    width: 20vw;
+}
+
+.description {
+    width: 30vw;
+}
+
+.subconcept {
+    width: 10vw;
+}
+
+.practices {
+    width: 20vw;
+}
+
+@media (min-width: 700px) {
+    .collapsible {
+        display: none;
+        width: 0vw;
+    }    
+
+    .stdItem div {
+        border: 2px solid lightgray;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .stdItem {
+        min-height: 50px;
+        outline: 1px solid gray;
+        margin: 0 1px 1px 0;
+    }
+
+    .stdItem div {
+        font-size: smaller;
+        padding: 3px;
+    }
+    #banner {
+        display: none;
+    }
+
+    .identifier {
+        background-color: lightgray;
+        width: 85px;
+        border-right: 1px solid gray;
+    }
+
+    .statement {
+        background-color: lightgray;
+        width: calc(100% - 98px);
+        float: right;
+    }
+
+    .description, .subconcept, .practices {
+        display: none;
+    }
+
+    .description {
+        color: lightslategray;
+    }
+
+    .collapsible {
+        width: 100%;
+        text-align: left;
+        color: lightslategray;
+        background-color: white;
+        visibility: hidden;
+    }
+
+    .collapsible:before {
+        visibility: visible;
+        content: "more...";
+    }
+
+    .collapsible.active:before {
+        content: "less...";
+        visibility: visible;                
+    }
+
+    .show {
+        display: flex;
+        width: 100%;
+        outline: 1px solid gray;
+        margin: 0 1px 1px 0;
+    }
+}
