@@ -29,8 +29,16 @@
     width: 30vw;
 }
 
-.subconcept {
+.concept {
     width: 10vw;
+}
+
+.stdItem .subconcept {
+    width: 10vw;
+    font-size: smaller;
+    border: none;
+    color: #5b5b5b;
+    font-style: italic;
 }
 
 .practices {
@@ -58,9 +66,11 @@
     }
 
     .stdItem div {
-        font-size: smaller;
+        font-size: 14px;
         padding: 3px;
+      outline: 1px solid gray;
     }
+    
     #banner {
         display: none;
     }
@@ -77,7 +87,7 @@
         float: right;
     }
 
-    .description, .subconcept, .practices {
+    .description, .subconcept, .practices, .concept {
         display: none;
     }
 
@@ -102,11 +112,21 @@
         content: "less...";
         visibility: visible;                
     }
+  
+    .stdItem div .subconcept {
+      outline: none;
+      padding-left: 10px;
+      width: 80%;
+    }
+  
+  
+    
 
     .show {
         display: flex;
-        width: 100%;
-        outline: 1px solid gray;
+        width: 100%;        
         margin: 0 1px 1px 0;
     }
+  
+  
 }
